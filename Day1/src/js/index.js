@@ -1,7 +1,13 @@
 const title = document.querySelector("#title");
 
+const CLICKED_CLASS = "clicked";
+
 function handleClick() {
-  title.style.color = "red";
+  title.classList.toggle(CLICKED_CLASS);
 }
 
-window.addEventListener("click", handleClick);
+function init() {
+  window.addEventListener("click", handleClick);
+}
+
+init();
